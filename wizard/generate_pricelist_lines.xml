@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="generate_pricelist_lines_view_form" model="ir.ui.view">
+        <field name="name">generate_pricelist_lines.view.form</field>
+        <field name="model">product.pricelist.lines.wizard</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <group>
+                    <field name="partner_id" />
+                </group>
+
+                <footer>
+                    <button type="object" name="generate_seller_lines" string="Generate" class="btn-primary" />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>                
+            </form>
+        </field>
+    </record>
+
+
+    <record id="generate_pricelist_lines_action" model="ir.actions.act_window">
+        <field name="name">Generate pricelist lines</field>
+        <field name="res_model">product.pricelist.lines.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>
