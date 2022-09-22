@@ -3,6 +3,7 @@ from odoo import api, fields, models
 
 class GeneratePricelistLines(models.TransientModel):
     _name = "product.pricelist.lines.wizard"
+    _description = "Wizard to generate pricelists for all variants of a product"
 
     @api.model
     def default_get(self, fields):
